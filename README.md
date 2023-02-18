@@ -17,6 +17,7 @@ This should create a compiled game folder inside a Simulator's game library. Now
 
 # Reference list
 1. Official SDK documentation: [https://sdk.play.date/1.13.0/](https://sdk.play.date/1.13.0/)
+2. Free assets library: [https://itch.io/game-assets/tag-playdate](https://itch.io/game-assets/tag-playdate)
 
 # Attributions
 1. [Desert background image](https://www.freepik.com/free-vector/desert-forest-landscape-daytime-scene_16254303.htm#query=desert%20background&position=20&from_view=keyword&track=ais)
