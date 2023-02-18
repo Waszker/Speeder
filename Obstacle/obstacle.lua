@@ -16,3 +16,11 @@ function Obstacle:init(imagePath, gameSpeedAnimator)
     self:add()
 end
 
+function Obstacle:update()
+    local obstacleOffset = self.gameSpeedAnimator:currentValue() / 100
+    self:moveBy(-1 * obstacleOffset, 0)
+
+    if self.x < -50 then
+        self:remove()
+    end
+end
