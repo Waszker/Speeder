@@ -13,7 +13,7 @@ PlayerJumpingDirection = {
     DESCENDING = 3,
 }
 
-class('Player').extends(gfx.sprite)
+class("Player").extends(gfx.sprite)
 
 function Player:init(xPosition, yPosition, imageTablePath, gameSpeedAnimator)
     Player.super.init(self)
@@ -30,6 +30,7 @@ function Player:init(xPosition, yPosition, imageTablePath, gameSpeedAnimator)
     self:setScale(2)
     self:setImage(self.playerSpriteTable:getImage(1, 5))
     self:moveTo(xPosition, yPosition)
+    self:setCollideRect(16, 32, 32, 20)
     self:add()
 end
 
