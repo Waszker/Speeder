@@ -1,5 +1,10 @@
 # Speeder
 
+My first, (very) simple Playdate game.
+
+<img src=".readme_images/speeder-menu.gif"/>
+<img src=".readme_images/speeder-game.gif"/>
+
 # Setup
 
 ## Linux
