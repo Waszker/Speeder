@@ -1,0 +1,7 @@
+name=Speeder
+author=Piotr Waszkiewicz
+description=A nice kitty stuck on a desert
+bundleID=com.waszker.speeder
+version=0.1
+buildNumber=1
+imagePath=SystemAssets

@@ -12,10 +12,21 @@ function GameScene:init()
 
     -- Initialize some internal values
     self.gameSpeedAnimator = gfx.animator.new(5 * 60 * 1000, minWorldSpeed, maxWorldSpeed)  -- max speed after 5 minutes
-    self.obstacleCreationDelayAnimator = tmr.new(1500, function()
-        Obstacle("Images/rock", self.gameSpeedAnimator)
+    self.obstacleCreationDisabled = true  -- initially do not allow for obstacle creation
+    self.obstacleCreationDelayAnimator = tmr.new(100, function()
+        if self.obstacleCreationDisabled == false then
+            if math.random(1, 2) == 1 then
+                Obstacle("Images/cactus", self.gameSpeedAnimator)
+            else
+                Obstacle("Images/rock", self.gameSpeedAnimator)
+            end
+            self.obstacleCreationDisabled = true
+            local obstacleCreationEnableTimeout = math.random(1000, 5000)
+            tmr.new(obstacleCreationEnableTimeout, function() self.obstacleCreationDisabled = false end)
+        end
     end)
     self.obstacleCreationDelayAnimator.repeats = true
+    tmr.new(1500, function() self.obstacleCreationDisabled = false end)  -- start spawning obstacles after 1.5sec
 
     -- Load background image
     local backgroundImage = gfx.image.new("Images/backgroundDesert")
@@ -42,6 +53,6 @@ end
 function GameScene:checkCollisions()
     local collisions = gfx.sprite.allOverlappingSprites()
     if #collisions > 0 then
-        print("Collision detected!!!!")
+        restartGame()
     end
 end
