@@ -23,3 +23,4 @@ This should create a compiled game folder inside a Simulator's game library. Now
 1. [Desert background image](https://www.freepik.com/free-vector/desert-forest-landscape-daytime-scene_16254303.htm#query=desert%20background&position=20&from_view=keyword&track=ais)
 2. [Cat sprite](https://elthen.itch.io/2d-pixel-art-cat-sprites)
 3. [Rock sprite](https://verzatiledev.itch.io/rocks)
+4. [Cactus sprite](https://www.freepik.com/free-vector/silhouettes-cactus_804755.htm#query=cactus&position=0&from_view=search&track=sph)
